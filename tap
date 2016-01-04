@@ -11,5 +11,6 @@ tap<br />
 
   <script src="style/jquery.min.js"></script>
   <script src="style/bootstrap.min.js"></script>
+  <script src="taplib.js"></script>
 </body>
 </html>
