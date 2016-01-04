@@ -5,10 +5,16 @@
   <link rel="stylesheet" type="text/css" href="style/style.css">
   <title>TAP!</title>
 </head>
+
 <body>
 
-tap<br />
+<b>tap:</b><br />
 
+<!-- Our BPM Selector -->
+<select id='bpmSelector'>
+</select> 
+
+<!-- Load our Scripts at the bottom of our markup -->
   <script src="style/jquery.min.js"></script>
   <script src="style/bootstrap.min.js"></script>
   <script src="taplib.js"></script>
