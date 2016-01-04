@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <title>TAP!</title>
+</head>
+<body>
+
+tap<br />
+
+  <script src="style/jquery.min.js"></script>
+  <script src="style/bootstrap.min.js"></script>
+</body>
+</html>
