@@ -1,3 +1,4 @@
-simple browser based metronome 
+# Tap
 
-implementing functions from the korg tm40
+Simple browser based Metronome for personal use.
+One day will implement some features from the Korg TM40
