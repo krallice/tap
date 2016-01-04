@@ -5,12 +5,22 @@ $(document).ready(function(){
 
   // Setup our Start Button:
   var metronomeEnabled=0;
+  var metronomeHandle=0;
   $("#startButton").click(function() {
     metronomeEnabled = 1 - metronomeEnabled;
-    alert(metronomeEnabled);
+    if ( metronomeEnabled == 1 ) {
+      metronomeTick();
+      metronomeHandle = setInterval(metronomeTick, 3000);
+    } else {
+      clearInterval(metronomeHandle);
+    }
   });
 
 });
+
+function metronomeTick() {
+  alert("tick");
+}
 
 function loadConfig() {
 
