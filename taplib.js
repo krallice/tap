@@ -1,8 +1,14 @@
 // When Document is Ready:
 $(document).ready(function(){
-
   // Load our JSON Config:
   loadConfig();
+
+  // Setup our Start Button:
+  var metronomeEnabled=0;
+  $("#startButton").click(function() {
+    metronomeEnabled = 1 - metronomeEnabled;
+    alert(metronomeEnabled);
+  });
 
 });
 
