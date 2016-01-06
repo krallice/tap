@@ -3,6 +3,8 @@ $(document).ready(function(){
   // Load our JSON Config:
   loadConfig();
 
+  $("#bpmSelector option[value='40']").prop("selected", true);
+
   // Delay Value between tick()s:
   var metronomeDelay=3000;
 
@@ -20,6 +22,21 @@ $(document).ready(function(){
     }
   });
 
+});
+
+// Bind our keydown presses:
+$(document).keydown(function(e) {
+  switch(e.which) {
+    case 38: // UP
+    $("#bpmSelector :selected")[prev]().prop("selected", true);
+    break;
+
+    case 40: // DOWN
+    $("#bpmSelector :selected")[next]().prop("selected", true);
+    break;
+
+    default: return;
+  }
 });
 
 // Only calculates based on crotchet notes to start with:
@@ -44,4 +61,5 @@ function loadConfig() {
     });
 
   });
+
 }
