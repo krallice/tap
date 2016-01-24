@@ -17,8 +17,10 @@ $(document).ready(function(){
       metronomeDelay=calculateDelay($("#bpmSelector").val());
       metronomeTick();
       metronomeHandle = setInterval(metronomeTick, metronomeDelay);
+      $("#startButton").attr("value", "Stop!");
     } else {
       clearInterval(metronomeHandle);
+      $("#startButton").attr("value", "Start!");
     }
   });
 
