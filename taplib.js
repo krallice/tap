@@ -24,17 +24,38 @@ $(document).ready(function(){
     }
   });
 
+  // Handler for when the BPM is changed:
+  $("#bpmSelector").change(function() {
+    if ( metronomeEnabled == 1 ) {
+      $("#startButton").trigger("click");
+      $("#startButton").trigger("click");
+    }
+  });
+
 });
 
 // Bind our keydown presses:
 $(document).keydown(function(e) {
   switch(e.which) {
-    case 38: // UP
-    $("#bpmSelector :selected")[prev]().prop("selected", true);
+
+    case 32: // SPACE
+    $("#startButton").trigger("click");
     break;
 
-    case 40: // DOWN
-    $("#bpmSelector :selected")[next]().prop("selected", true);
+    case 83: // S
+    $("#startButton").trigger("click");
+    break;
+
+    case 68: // D
+    $("#bpmSelector option:selected").next().attr("selected", "selected");
+    $("#bpmSelector").trigger("change");
+    //$("#bpmSelector :selected")[prev]().prop("selected", true);
+    break;
+
+    case 65: // A
+    $("#bpmSelector option:selected").prev().attr("selected", "selected");
+    $("#bpmSelector").trigger("change");
+    //$("#bpmSelector :selected")[next]().prop("selected", true);
     break;
 
     default: return;
