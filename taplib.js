@@ -46,10 +46,22 @@ $(document).keydown(function(e) {
     $("#startButton").trigger("click");
     break;
 
+    case 39: // LEFT
+    $("#bpmSelector option:selected").next().attr("selected", "selected");
+    $("#bpmSelector").trigger("change");
+    //$("#bpmSelector :selected")[prev]().prop("selected", true);
+    break;
+
     case 68: // D
     $("#bpmSelector option:selected").next().attr("selected", "selected");
     $("#bpmSelector").trigger("change");
     //$("#bpmSelector :selected")[prev]().prop("selected", true);
+    break;
+
+    case 37: // RIGHT
+    $("#bpmSelector option:selected").prev().attr("selected", "selected");
+    $("#bpmSelector").trigger("change");
+    //$("#bpmSelector :selected")[next]().prop("selected", true);
     break;
 
     case 65: // A
