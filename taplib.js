@@ -95,6 +95,14 @@ function loadConfig() {
       }));
     });
 
+    // Populate our BPM Selector:
+    $.each(json.pattern, function(entryIndex, entry) {
+      $('#patternSelector').append($('<option>', {
+        value: this.value,
+        text: this.name
+      }));
+    });
+
   });
 
 }
