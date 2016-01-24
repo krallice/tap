@@ -1,4 +1,7 @@
-# Tap
+# tapt
 
-Simple browser based Metronome for personal use.
-One day will implement some features from the Korg TM40
+Simple jQuery metronome for personal use.
+Based on the bpm steppings from the Korg TM-40.
+
+## todo:
+- Add triplet/pentuplet/sextuplet groupings
