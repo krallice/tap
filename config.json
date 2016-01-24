@@ -21,6 +21,6 @@
     { "bpm": "132" } 
    ],
   "pattern":[
-    { "crotchet": "1" }
+    { "name": "1/4", "value": "1" }
   ]
 }
