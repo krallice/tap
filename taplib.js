@@ -18,9 +18,11 @@ $(document).ready(function(){
       metronomeTick();
       metronomeHandle = setInterval(metronomeTick, metronomeDelay);
       $("#startButton").attr("value", "Stop!");
+      $("#startButton").removeClass("btn-default").addClass("btn-primary");
     } else {
       clearInterval(metronomeHandle);
       $("#startButton").attr("value", "Start!");
+      $("#startButton").removeClass("btn-primary").addClass("btn-default");
     }
   });
 
@@ -34,11 +36,28 @@ $(document).ready(function(){
 
 });
 
+// Stop space double triggering our button:
+$("#startButton").keydown(function(e) {
+  switch(e.which) {
+
+    case 32:
+    e.preventDefault();
+    e.stopPropagation();
+    $("#startButton").trigger("click");
+    break;
+
+    default: return;
+  }
+
+});
+
 // Bind our keydown presses:
 $(document).keydown(function(e) {
   switch(e.which) {
 
     case 32: // SPACE
+    e.preventDefault();
+    e.stopPropagation();
     $("#startButton").trigger("click");
     break;
 
